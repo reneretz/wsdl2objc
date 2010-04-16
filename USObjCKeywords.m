@@ -70,7 +70,6 @@ static USObjCKeywords *sharedInstance = nil;
 					@"switch",
 					@"default",
 					@"case",
-					@"inline",
 								
 					// Standard Mac/iPhone types that might be chosen as attribute names
 					@"fixed",
