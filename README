@@ -1,0 +1,23 @@
+This project is a replacement for Apple's WSMakeStubs utility and WS-Core
+=========================================================================
+
+Instructions on how to use the generated code from WSDL2ObjC
+Once you obtain WSDL2ObjC, code generation is pretty simple.
+
+  * Launch the app
+  * Browse to a WSDL file or enter in a URL
+  * Browse to an output directory
+  * Click "Parse WSDL"
+
+Source code files will be added to the output directory you've specified. There will be one pair of .h/.m files for each namespace in your WSDL.
+
+You can add the output files to your project or create a web service framework from them. Each project that uses the generated web service code will need to link against libxml2 by performing the following for each target in your XCode project:
+
+  * Get info on the target and go to the build tab
+  * Add "-lxml2" to the Other Linker Flags property
+  * Add "-I/usr/include/libxml2" to the Other C Flags property
+
+If you are building an iPhone project also perform the following:
+
+  * Right click on the Frameworks folder in your project and select Add -> Existing Frameworks...
+  * Select the CFNetwork.framework appropriate for your iPhone build
